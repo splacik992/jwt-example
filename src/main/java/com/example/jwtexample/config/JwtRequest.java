@@ -1,4 +1,4 @@
-package com.example.jwtexample.jwt;
+package com.example.jwtexample.config;
 
 import java.io.Serializable;
 

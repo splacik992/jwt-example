@@ -1,0 +1,5 @@
+jwt:
+  secret: jwtsecret
+spring:
+  main:
+    allow-circular-references: true

@@ -1,21 +1,24 @@
-package com.example.jwtexample.jwt.controller;
+package com.example.jwtexample.controller;
 
 
-import com.example.xlxsproject.project.jwt.JwtRequest;
-import com.example.xlxsproject.project.jwt.JwtResponse;
-import com.example.xlxsproject.project.jwt.config.JWTUserDetailsService;
-import com.example.xlxsproject.project.jwt.config.JwtTokenUtils;
+
+import com.example.jwtexample.config.JwtRequest;
+import com.example.jwtexample.config.JwtResponse;
+import com.example.jwtexample.config.JWTUserDetailsService;
+import com.example.jwtexample.config.JwtTokenUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin
+@EnableWebSecurity
 public class JwtAuthenticationController {
 
     private final AuthenticationManager authenticationManager;
